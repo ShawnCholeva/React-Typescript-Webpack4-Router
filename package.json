@@ -10,7 +10,7 @@
     "lint": "tslint 'src/**/*.{ts,tsx}'",
     "test": "jest",
     "pretest": "npm run lint",
-    "build:docker": "docker-compose up --build"
+    "build:docker": "docker-compose up --build -d"
   },
   "keywords": [
     "React",
