@@ -1,8 +1,6 @@
-FROM compulim/nanoserver-node
+FROM stefanscherer/node-windows
 
 RUN npm install -g serve
-
-CMD serve -s dist
 
 EXPOSE 5000
 
@@ -13,3 +11,5 @@ RUN npm install
 COPY . .
 
 RUN npm run build:prod
+
+CMD serve -p 5000 -s dist
