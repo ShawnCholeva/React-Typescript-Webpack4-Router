@@ -15,10 +15,10 @@ const config = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
+        test: /\.less$/,
         use: [
           {
-            loader: "style-loader",
+            loader: "style-loader"
           },
           {
             loader: "css-loader",
@@ -27,20 +27,25 @@ const config = {
               modules: true,
               localIdentName: '[local]___[hash:base64:5]'
              }
-          }
-        ]
-      },
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
           },
           {
             loader: "less-loader"
+          }
+        ]
+      },
+      { 
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use:'url-loader' 
+      },
+      { 
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 10000,
+              name: 'images/[hash]-[name].[ext]',
+            },
           }
         ]
       }
