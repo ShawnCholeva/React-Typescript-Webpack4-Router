@@ -10,7 +10,5 @@ const bootstrapperElement: HTMLElement = document.getElementById('root') as HTML
 const store = StoreProvider.getInstance().store;
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
+    <App />,
     bootstrapperElement);

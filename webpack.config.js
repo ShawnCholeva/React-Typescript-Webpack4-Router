@@ -60,12 +60,12 @@ const config = {
         template: path.join(__dirname, 'src/index.html')
     })
   ],
-  devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    historyApiFallback: true,
     compress: true,
-    port: 8080
+    port: 8080,
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname),
+    publicPath: '/',
   }
 };
 
