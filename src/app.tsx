@@ -10,8 +10,7 @@ class App extends Component {
             <Router>
                 <Switch>
                     <Route exact path='/' component={Home}/>
-                    <Route exact path='/about' component={About}/>
-                    <Route exact path='/about/test' component={About}/>
+                    <Route exact path='/about/:guid?' component={About}/>
                     <Route exact path='*' component={My404Component} />
                 </Switch>
             </Router>
