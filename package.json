@@ -5,7 +5,9 @@
   "main": "index.tsx",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
+    "prestart": "npm run test",
     "build:prod": "webpack --mode production",
+    "start:prod": "serve dist -s",
     "lint": "tslint 'src/**/*.{ts,tsx}'",
     "test": "jest",
     "pretest": "npm run lint",
